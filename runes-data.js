@@ -1,0 +1,51 @@
+const runeData = {
+  root: {
+    image:'assets/runes/root.webp',
+    type:{en:'RUNE 01 / WORLD ATTUNEMENT',es:'RUNA 01 / SINTONÍA DE MUNDO'},
+    title:{en:'Rune of the Root',es:'Runa de la Raíz'},
+    world:{en:'The Living Forest',es:'El Bosque Viviente'},
+    description:{en:'A bond with living systems built on protection rather than domination. The Root answers when Mark works with the world instead of forcing it to obey.',es:'Un vínculo con sistemas vivos basado en la protección y no en la dominación. La Raíz responde cuando Mark trabaja con el mundo en lugar de obligarlo a obedecer.'},
+    identity:{en:'Defense / Control / Sustain',es:'Defensa / Control / Resistencia'},
+    abilities:{en:['Living Armor — a protective layer of roots and leaves.','Branch Spear — a focused piercing attack grown from living matter.','Nature Pulse — disrupts nearby enemies and pushes back corruption.'],es:['Armadura Viviente — una capa protectora de raíces y hojas.','Lanza de Ramas — un ataque perforante concentrado creado con materia viva.','Pulso Natural — desestabiliza enemigos cercanos y hace retroceder la corrupción.']}
+  },
+  tide: {
+    image:'assets/runes/tide.webp',type:{en:'RUNE 02 / WORLD ATTUNEMENT',es:'RUNA 02 / SINTONÍA DE MUNDO'},title:{en:'Rune of the Tide',es:'Runa de la Marea'},world:{en:'The Infinite Sea / Lumina',es:'El Mar Infinito / Lumina'},
+    description:{en:'Adaptation, movement and memory. The Tide never returns in exactly the same form, rewarding players who change rhythm instead of repeating one solution.',es:'Adaptación, movimiento y memoria. La Marea nunca regresa exactamente de la misma forma, premiando a quien cambia de ritmo en vez de repetir una sola solución.'},
+    identity:{en:'Mobility / Pressure / Adaptation',es:'Movilidad / Presión / Adaptación'},abilities:{en:['Current Step — a fluid evasive dash that carries momentum.','Pressure Lance — compressed water released as a high-impact projectile.','Tidal Veil — redirects incoming force instead of simply blocking it.'],es:['Paso de Corriente — un dash fluido que conserva el impulso.','Lanza de Presión — agua comprimida liberada como proyectil de alto impacto.','Velo de Marea — redirige la fuerza entrante en lugar de limitarse a bloquearla.']}
+  },
+  horizon: {
+    image:'assets/runes/horizon.webp',type:{en:'RUNE 03 / SKY ATTUNEMENT',es:'RUNA 03 / SINTONÍA DEL CIELO'},title:{en:'Rune of the Horizon',es:'Runa del Horizonte'},world:{en:'Altaria / The Eternal Skies',es:'Altaria / Los Cielos Eternos'},
+    description:{en:'Freedom, will and verticality. The Horizon changes traversal as much as combat, turning open air and pressure into part of the player’s toolkit.',es:'Libertad, voluntad y verticalidad. El Horizonte transforma tanto el desplazamiento como el combate, convirtiendo el aire y la presión en parte del arsenal del jugador.'},
+    identity:{en:'Aerial Mobility / Burst / Positioning',es:'Movilidad Aérea / Ráfaga / Posicionamiento'},abilities:{en:['Wind Wings — short controlled aerial movement.','Pressure Burst — compressed air that launches or interrupts targets.','Sky Step — a mid-air reposition that rewards timing.'],es:['Alas de Viento — movimiento aéreo controlado de corta duración.','Ráfaga de Presión — aire comprimido que lanza o interrumpe objetivos.','Paso Celeste — reposicionamiento en el aire que recompensa el buen timing.']}
+  },
+  prismatic: {
+    image:'assets/runes/prismatic.webp',type:{en:'RUNE 04 / PERCEPTION ATTUNEMENT',es:'RUNA 04 / SINTONÍA DE PERCEPCIÓN'},title:{en:'Prismatic Rune',es:'Runa Prismática'},world:{en:'The Crystal Conclave',es:'El Cónclave de Cristal'},
+    description:{en:'Truth, multiplicity and perception. Prismatic power refracts energy and information, revealing that one event can hold more than one valid perspective.',es:'Verdad, multiplicidad y percepción. El poder prismático refracta energía e información, revelando que un mismo evento puede contener más de una perspectiva válida.'},
+    identity:{en:'Perception / Barrier / Refraction',es:'Percepción / Barrera / Refracción'},abilities:{en:['Prism Ward — a refractive defensive field.','Refraction — bends hostile energy away from its original line.','Fracture Sight — briefly exposes weak links, illusions or unstable structures.'],es:['Barrera Prismática — un campo defensivo refractivo.','Refracción — desvía energía hostil de su trayectoria original.','Vista de Fractura — revela brevemente vínculos débiles, ilusiones o estructuras inestables.']}
+  },
+  inner: {
+    image:'assets/runes/inner-threshold.webp',type:{en:'RUNE 05 / INNER ATTUNEMENT',es:'RUNA 05 / SINTONÍA INTERIOR'},title:{en:'Rune of the Inner Threshold',es:'Runa del Umbral Interior'},world:{en:'The Inner Mind',es:'La Mente Interior'},
+    description:{en:'The frontier between memory, fear and will. This rune is less about raw damage and more about resisting control, reading echoes and staying yourself under pressure.',es:'La frontera entre memoria, miedo y voluntad. Esta runa trata menos de daño bruto y más de resistir el control, leer ecos y conservar la propia identidad bajo presión.'},
+    identity:{en:'Mental Defense / Insight / Counter-Control',es:'Defensa Mental / Percepción / Contra-Control'},abilities:{en:['Mind Ward — resistance against fear and control effects.','Echo Recall — surfaces a useful memory or prior pattern.','Dreambreak — interrupts illusion-based or mental attacks.'],es:['Guardia Mental — resistencia contra miedo y efectos de control.','Recuerdo del Eco — hace emerger una memoria o patrón previo útil.','Rompesueños — interrumpe ataques ilusorios o mentales.']}
+  },
+  convergence: {
+    image:'assets/runes/convergence.webp',type:{en:'RUNE 06 / RESONANCE ATTUNEMENT',es:'RUNA 06 / SINTONÍA DE RESONANCIA'},title:{en:'Rune of Convergence',es:'Runa de la Convergencia'},world:{en:'The Union Between Worlds',es:'La Unión Entre Mundos'},
+    description:{en:'Convergence is not a stronger element; it is the ability to let different powers coexist without erasing one another. Its value grows with the player’s mastery of earlier runes.',es:'La Convergencia no es un elemento más fuerte; es la capacidad de permitir que poderes distintos coexistan sin borrarse entre sí. Su valor crece con el dominio de las runas anteriores.'},
+    identity:{en:'Synergy / Combo Routing / Resonance',es:'Sinergia / Rutas de Combo / Resonancia'},abilities:{en:['Cross-Rune Link — chains compatible effects from two attuned runes.','Resonant Pulse — amplifies a recently used rune without copying it.','Third technique — CLASSIFIED.'],es:['Vínculo Entre Runas — encadena efectos compatibles de dos runas sintonizadas.','Pulso Resonante — amplifica una runa usada recientemente sin copiarla.','Tercera técnica — CLASIFICADA.']}
+  },
+  rupture: {
+    image:'assets/runes/rupture.webp',type:{en:'RUNE 07 / UNSTABLE FREQUENCY',es:'RUNA 07 / FRECUENCIA INESTABLE'},title:{en:'Rune of Rupture',es:'Runa de la Ruptura'},world:{en:'Origin undisclosed',es:'Origen no revelado'},
+    description:{en:'A dangerous frequency associated with severing corrupted bonds. It offers explosive interruption at a cost, making restraint as important as power.',es:'Una frecuencia peligrosa asociada con cortar vínculos corruptos. Ofrece una interrupción explosiva a cambio de un costo, haciendo que la contención sea tan importante como el poder.'},
+    identity:{en:'Disruption / High Risk / Severing',es:'Disrupción / Alto Riesgo / Ruptura de Vínculos'},abilities:{en:['Sever Link — breaks a hostile tether or active corruption channel.','Rupture Wave — destabilizes nearby constructs and shields.','Overload — CLASSIFIED / high-risk concept.'],es:['Cortar Vínculo — rompe una conexión hostil o canal activo de corrupción.','Onda de Ruptura — desestabiliza construcciones y escudos cercanos.','Sobrecarga — CLASIFICADA / concepto de alto riesgo.']}
+  },
+  echo: {
+    image:'assets/runes/last-echo.webp',type:{en:'RUNE 08 / LATE-GAME RESONANCE',es:'RUNA 08 / RESONANCIA DE JUEGO TARDÍO'},title:{en:'Rune of the Last Echo',es:'Runa del Último Eco'},world:{en:'CLASSIFIED',es:'CLASIFICADO'},
+    description:{en:'A late-game rune tied to what remains after a world, choice or person can no longer answer directly. Its full role is intentionally being kept out of the public codex.',es:'Una runa de juego tardío ligada a lo que permanece cuando un mundo, una decisión o una persona ya no puede responder directamente. Su función completa se mantiene fuera del códice público de forma intencional.'},
+    identity:{en:'Memory / Echo / Late-Game Mastery',es:'Memoria / Eco / Maestría de Juego Tardío'},abilities:{en:['Echo Recall — briefly reawakens a mastered interaction.','Resonant Surge — current concept under testing.','Final technique — CLASSIFIED.'],es:['Recuerdo del Eco — reactiva brevemente una interacción dominada.','Oleada Resonante — concepto actual en pruebas.','Técnica final — CLASIFICADA.']}
+  },
+  herald: {
+    image:'assets/runes/herald.webp',type:{en:'CENTRAL SIGIL / TALISMAN CORE',es:'SIGILO CENTRAL / NÚCLEO DEL TALISMÁN'},title:{en:'Sigil of the Herald',es:'Sigilo del Heraldo'},world:{en:'No single world',es:'No pertenece a un solo mundo'},
+    description:{en:'The central seal of the system. The Herald does not replace the other runes; it coordinates them, tracks attunement and represents the responsibility of carrying multiple worlds at once.',es:'El sello central del sistema. El Heraldo no sustituye a las demás runas; las coordina, registra la sintonía y representa la responsabilidad de cargar varios mundos al mismo tiempo.'},
+    identity:{en:'Attunement / Loadout / Core Resonance',es:'Sintonía / Configuración / Resonancia Central'},abilities:{en:['Rune Attunement — equips and stabilizes unlocked rune powers.','Loadout Link — supports the player’s chosen active-ability configuration.','Core Resonance — deeper function intentionally unrevealed.'],es:['Sintonía de Runas — equipa y estabiliza poderes de runas desbloqueadas.','Vínculo de Configuración — sostiene la selección de habilidades activas del jugador.','Resonancia Central — función profunda aún no revelada.']}
+  }
+};

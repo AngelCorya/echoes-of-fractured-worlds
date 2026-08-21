@@ -1,0 +1,34 @@
+<section class="section survey" id="survey">
+<div class="survey-shell reveal">
+<div class="survey-intro">
+<p class="kicker">05 / EARLY AUDIENCE SURVEY</p>
+<h2 data-en="Help shape what comes next." data-es="Ayuda a decidir qué viene después.">Help shape what comes next.</h2>
+<p data-en="This is an early validation survey. It takes about one minute. Your answers help decide language, platform, format and pricing priorities before money is spent." data-es="Esta es una encuesta temprana de validación. Toma aproximadamente un minuto. Tus respuestas ayudan a decidir prioridades de idioma, plataforma, formato y precio antes de gastar dinero.">
+             This is an early validation survey. It takes about one minute. Your answers help decide language, platform, format and pricing priorities before money is spent.
+          </p>
+</div>
+<form id="echoesSurvey">
+<input id="favoriteRune" name="favoriteRune" type="hidden" value=""/>
+<fieldset>
+<legend data-en="What interests you most?" data-es="¿Qué te interesa más?">What interests you most?</legend>
+<label><input name="interest" type="checkbox" value="Novel"/> <span data-en="The novel" data-es="La novela">The novel</span></label>
+<label><input name="interest" type="checkbox" value="Game"/> <span data-en="The game" data-es="El videojuego">The game</span></label>
+<label><input name="interest" type="checkbox" value="Music"/> <span data-en="The music" data-es="La música">The music</span></label>
+<label><input name="interest" type="checkbox" value="World/Lore"/> <span data-en="The world &amp; lore" data-es="El mundo y lore">The world &amp; lore</span></label>
+</fieldset>
+<div class="two">
+<label class="select-label"><span data-en="Preferred language" data-es="Idioma preferido">Preferred language</span><select name="language" required=""><option value="">—</option><option>Spanish</option><option>English</option><option>Both</option></select></label>
+<label class="select-label"><span data-en="Preferred game platform" data-es="Plataforma de juego preferida">Preferred game platform</span><select name="platform" required=""><option value="">—</option><option>Steam / PC</option><option>PlayStation</option><option>Xbox</option><option>Nintendo</option><option>Mobile</option></select></label>
+</div>
+<fieldset><legend data-en="What would you be most comfortable paying for an indie story-driven game like this?" data-es="¿Qué precio te parecería más cómodo para un juego indie narrativo como éste?">What would you be most comfortable paying for an indie story-driven game like this?</legend>
+<label><input name="gamePrice" required="" type="radio" value="Under $15 USD"/> Under $15 USD</label><label><input name="gamePrice" type="radio" value="$15–25 USD"/> $15–25 USD</label><label><input name="gamePrice" type="radio" value="$25–40 USD"/> $25–40 USD</label><label><input name="gamePrice" type="radio" value="$40+ USD"/> $40+ USD</label></fieldset>
+<label class="select-label"><span data-en="What made you most curious about Echoes?" data-es="¿Qué fue lo que más despertó tu curiosidad sobre Echoes?">What made you most curious about Echoes?</span><select name="hook" required=""><option value="">—</option><option>Story</option><option>Characters</option><option>Art / worlds</option><option>Nine runes</option><option>Music</option><option>Game combat</option><option>Novel</option></select></label>
+<label class="select-label"><span data-en="Optional: one thing you want to see next" data-es="Opcional: una cosa que te gustaría ver después">Optional: one thing you want to see next</span><textarea maxlength="500" name="comment" placeholder="..." rows="3"></textarea></label>
+<label class="consent"><input name="updates" type="checkbox"/><span data-en="I'd like to know when the next preview is available." data-es="Quiero saber cuando haya un nuevo adelanto.">I'd like to know when the next preview is available.</span></label>
+<div class="submit-row"><button class="btn primary" data-en="Prepare my feedback" data-es="Preparar mis respuestas" type="submit">Prepare my feedback</button><small data-en="No account required. This prototype does not send data to a server yet." data-es="No requiere cuenta. Este prototipo todavía no envía datos a un servidor." id="surveyNote">No account required. This prototype does not send data to a server yet.</small></div>
+</form>
+<div class="survey-result" hidden="" id="surveyResult"><h3 data-en="Thank you — your feedback is ready." data-es="Gracias — tus respuestas están listas.">Thank you — your feedback is ready.</h3><p data-en="For the zero-cost prototype, copy the summary below. Once the free form endpoint is connected, this same survey will submit automatically." data-es="Para el prototipo sin costo, copia el resumen de abajo. Una vez conectemos el formulario gratuito, esta misma encuesta se enviará automáticamente.">For the zero-cost prototype, copy the summary below. Once the free form endpoint is connected, this same survey will submit automatically.</p><pre id="surveyOutput"></pre><button class="btn ghost" data-en="Copy feedback" data-es="Copiar respuestas" id="copySurvey" type="button">Copy feedback</button></div>
+</div>
+</section>
+<section class="final-cta"><div class="reveal"><span class="sigil">✦</span><h2 data-en="Enter the first fractured world." data-es="Entra al primer mundo fracturado.">Enter the first fractured world.</h2><p data-en="Echoes is being built independently from Mexico — one world, one track and one playable step at a time." data-es="Echoes se está construyendo de forma independiente desde México — un mundo, una canción y un paso jugable a la vez.">Echoes is being built independently from Mexico — one world, one track and one playable step at a time.</p><a class="btn primary" data-en="Start with the free chapter" data-es="Empieza con el capítulo gratis" href="#read">Start with the free chapter</a></div></section>
+<footer><div><b>ECHOES OF FRACTURED WORLDS</b><span>© 2026 Angel Corya. Early development material.</span></div><div class="footer-code">EFW / VALIDATION HUB / V0.2</div></footer>

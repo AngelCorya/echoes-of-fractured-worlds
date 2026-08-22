@@ -15,13 +15,36 @@
 <label><input name="interest" type="checkbox" value="Game"/> <span data-en="The game" data-es="El videojuego">The game</span></label>
 <label><input name="interest" type="checkbox" value="Music"/> <span data-en="The music" data-es="La música">The music</span></label>
 <label><input name="interest" type="checkbox" value="World/Lore"/> <span data-en="The world &amp; lore" data-es="El mundo y lore">The world &amp; lore</span></label>
+<label><input name="interest" type="checkbox" value="Mixed experience"/> <span data-en="A mixed experience" data-es="Una experiencia mixta">A mixed experience</span></label>
 </fieldset>
+<div class="conditional" data-condition="novel" id="novelQuestions">
+<p class="conditional-title" data-en="NOVEL PREFERENCES" data-es="PREFERENCIAS DE LA NOVELA">NOVEL PREFERENCES</p>
+<fieldset><legend data-en="How would you prefer to buy the novel?" data-es="¿Cómo preferirías comprar la novela?">How would you prefer to buy the novel?</legend>
+<label><input name="novelFormat" type="radio" value="Digital"/> <span data-en="Digital" data-es="Digital">Digital</span></label>
+<label><input name="novelFormat" type="radio" value="Physical"/> <span data-en="Physical" data-es="Física">Physical</span></label>
+<label><input name="novelFormat" type="radio" value="Both"/> <span data-en="Both" data-es="Ambas">Both</span></label></fieldset>
+<fieldset class="conditional" data-condition="physical" id="physicalQuestions"><legend data-en="Which physical edition would you prefer?" data-es="¿Qué edición física preferirías?">Which physical edition would you prefer?</legend>
+<label><input name="physicalEdition" type="radio" value="Paperback"/> <span data-en="Paperback" data-es="Pasta blanda">Paperback</span></label>
+<label><input name="physicalEdition" type="radio" value="Premium hardcover"/> <span data-en="Premium hardcover" data-es="Pasta dura premium">Premium hardcover</span></label>
+<label><input name="physicalEdition" type="radio" value="Either"/> <span data-en="Either" data-es="Cualquiera">Either</span></label>
+<fieldset><legend data-en="Would exclusive art, rune cards or soundtrack access increase your interest in a premium edition?" data-es="¿Arte exclusivo, tarjetas de runas o acceso al soundtrack aumentarían tu interés en una edición premium?">Would exclusive extras increase your interest?</legend>
+<label><input name="premiumExtras" type="radio" value="Yes"/> <span data-en="Yes" data-es="Sí">Yes</span></label><label><input name="premiumExtras" type="radio" value="Maybe"/> <span data-en="Maybe" data-es="Tal vez">Maybe</span></label><label><input name="premiumExtras" type="radio" value="No"/> <span data-en="No" data-es="No">No</span></label></fieldset></fieldset>
+</div>
+<div class="conditional" data-condition="game" id="gameQuestions">
+<p class="conditional-title" data-en="GAME PREFERENCES" data-es="PREFERENCIAS DEL JUEGO">GAME PREFERENCES</p>
+<fieldset><legend data-en="Where would you prefer to play?" data-es="¿Dónde preferirías jugar?">Where would you prefer to play?</legend>
+<label><input name="platform" type="checkbox" value="Steam / PC"/> Steam / PC</label><label><input name="platform" type="checkbox" value="PlayStation"/> PlayStation</label><label><input name="platform" type="checkbox" value="Xbox"/> Xbox</label><label><input name="platform" type="checkbox" value="Nintendo"/> Nintendo</label><label><input name="platform" type="checkbox" value="Other"/> <span data-en="Other" data-es="Otra">Other</span></label><label><input name="platform" type="checkbox" value="No preference"/> <span data-en="No preference" data-es="Sin preferencia">No preference</span></label></fieldset>
+<fieldset><legend data-en="What price would feel comfortable for an indie story-driven game?" data-es="¿Qué precio te parecería cómodo para un juego indie narrativo?">What price would feel comfortable?</legend>
+<label><input name="gamePrice" type="radio" value="Under $15 USD"/> Under $15 USD</label><label><input name="gamePrice" type="radio" value="$15–25 USD"/> $15–25 USD</label><label><input name="gamePrice" type="radio" value="$25–40 USD"/> $25–40 USD</label><label><input name="gamePrice" type="radio" value="$40+ USD"/> $40+ USD</label></fieldset>
+</div>
+<div class="conditional" data-condition="mixed" id="mixedQuestions">
+<p class="conditional-title" data-en="MIXED EXPERIENCE" data-es="EXPERIENCIA MIXTA">MIXED EXPERIENCE</p>
+<fieldset><legend data-en="Which combination appeals to you most?" data-es="¿Qué combinación te atrae más?">Which combination appeals to you most?</legend>
+<label><input name="mixedFormat" type="radio" value="Novel + Game"/> <span data-en="Novel + Game" data-es="Novela + Juego">Novel + Game</span></label><label><input name="mixedFormat" type="radio" value="Novel + Soundtrack"/> <span data-en="Novel + Soundtrack" data-es="Novela + Soundtrack">Novel + Soundtrack</span></label><label><input name="mixedFormat" type="radio" value="Game + Soundtrack"/> <span data-en="Game + Soundtrack" data-es="Juego + Soundtrack">Game + Soundtrack</span></label><label><input name="mixedFormat" type="radio" value="Novel + Game + Soundtrack"/> <span data-en="Novel + Game + Soundtrack" data-es="Novela + Juego + Soundtrack">Novel + Game + Soundtrack</span></label></fieldset>
+</div>
 <div class="two">
 <label class="select-label"><span data-en="Preferred language" data-es="Idioma preferido">Preferred language</span><select name="language" required=""><option value="">—</option><option>Spanish</option><option>English</option><option>Both</option></select></label>
-<label class="select-label"><span data-en="Preferred game platform" data-es="Plataforma de juego preferida">Preferred game platform</span><select name="platform" required=""><option value="">—</option><option>Steam / PC</option><option>PlayStation</option><option>Xbox</option><option>Nintendo</option><option>Mobile</option></select></label>
 </div>
-<fieldset><legend data-en="What would you be most comfortable paying for an indie story-driven game like this?" data-es="¿Qué precio te parecería más cómodo para un juego indie narrativo como éste?">What would you be most comfortable paying for an indie story-driven game like this?</legend>
-<label><input name="gamePrice" required="" type="radio" value="Under $15 USD"/> Under $15 USD</label><label><input name="gamePrice" type="radio" value="$15–25 USD"/> $15–25 USD</label><label><input name="gamePrice" type="radio" value="$25–40 USD"/> $25–40 USD</label><label><input name="gamePrice" type="radio" value="$40+ USD"/> $40+ USD</label></fieldset>
 <label class="select-label"><span data-en="What made you most curious about Echoes?" data-es="¿Qué fue lo que más despertó tu curiosidad sobre Echoes?">What made you most curious about Echoes?</span><select name="hook" required=""><option value="">—</option><option>Story</option><option>Characters</option><option>Art / worlds</option><option>Nine runes</option><option>Music</option><option>Game combat</option><option>Novel</option></select></label>
 <label class="select-label"><span data-en="Optional: one thing you want to see next" data-es="Opcional: una cosa que te gustaría ver después">Optional: one thing you want to see next</span><textarea maxlength="500" name="comment" placeholder="..." rows="3"></textarea></label>
 <label class="consent"><input name="updates" type="checkbox"/><span data-en="I'd like to know when the next preview is available." data-es="Quiero saber cuando haya un nuevo adelanto.">I'd like to know when the next preview is available.</span></label>
@@ -32,3 +55,4 @@
 </section>
 <section class="final-cta"><div class="reveal"><span class="sigil">✦</span><h2 data-en="Enter the first fractured world." data-es="Entra al primer mundo fracturado.">Enter the first fractured world.</h2><p data-en="Echoes is being built independently from Mexico — one world, one track and one playable step at a time." data-es="Echoes se está construyendo de forma independiente desde México — un mundo, una canción y un paso jugable a la vez.">Echoes is being built independently from Mexico — one world, one track and one playable step at a time.</p><a class="btn primary" data-en="Start with the free chapter" data-es="Empieza con el capítulo gratis" href="#read">Start with the free chapter</a></div></section>
 <footer><div><b>ECHOES OF FRACTURED WORLDS</b><span>© 2026 Angel Corya. Early development material.</span></div><div class="footer-code">EFW / VALIDATION HUB / V0.2</div></footer>
+

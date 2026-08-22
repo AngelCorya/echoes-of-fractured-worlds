@@ -11,6 +11,9 @@
 <input id="favoriteRune" name="favoriteRune" type="hidden" value=""/>
 <input aria-hidden="true" autocomplete="off" class="form-honeypot" name="_gotcha" tabindex="-1" type="text"/>
 <input name="source" type="hidden" value="Echoes Validation Hub V0.2"/>
+<input name="_subject" type="hidden" value="New Echoes Validation Survey response"/>
+<input id="siteLanguage" name="siteLanguage" type="hidden" value="en"/>
+<input id="submittedAt" name="submittedAt" type="hidden" value=""/>
 <fieldset>
 <legend data-en="What interests you most?" data-es="¿Qué te interesa más?">What interests you most?</legend>
 <label><input name="interest" type="checkbox" value="Novel"/> <span data-en="The novel" data-es="La novela">The novel</span></label>
@@ -49,7 +52,11 @@
 </div>
 <label class="select-label"><span data-en="What made you most curious about Echoes?" data-es="¿Qué fue lo que más despertó tu curiosidad sobre Echoes?">What made you most curious about Echoes?</span><select name="hook" required=""><option value="">—</option><option>Story</option><option>Characters</option><option>Art / worlds</option><option>Nine runes</option><option>Music</option><option>Game combat</option><option>Novel</option></select></label>
 <label class="select-label"><span data-en="Optional: one thing you want to see next" data-es="Opcional: una cosa que te gustaría ver después">Optional: one thing you want to see next</span><textarea maxlength="500" name="comment" placeholder="..." rows="3"></textarea></label>
-<label class="consent"><input name="updates" type="checkbox"/><span data-en="I'd like to know when the next preview is available." data-es="Quiero saber cuando haya un nuevo adelanto.">I'd like to know when the next preview is available.</span></label>
+<label class="consent"><input name="updates" type="checkbox" value="Yes"/><span data-en="I'd like to know when the next preview is available." data-es="Quiero saber cuando haya un nuevo adelanto.">I'd like to know when the next preview is available.</span></label>
+<div class="conditional email-conditional" id="emailQuestions">
+<label class="select-label"><span data-en="Email for Echoes updates" data-es="Correo para recibir novedades de Echoes">Email for Echoes updates</span><input autocomplete="email" maxlength="254" name="email" placeholder="name@example.com" type="email"/></label>
+<p class="privacy-note" data-en="Your email will only be used for Echoes of Fractured Worlds updates. It will not be sold or shared, and you may unsubscribe at any time." data-es="Tu correo se utilizará únicamente para novedades de Echoes of Fractured Worlds. No se venderá ni compartirá y podrás darte de baja cuando quieras.">Your email will only be used for Echoes of Fractured Worlds updates. It will not be sold or shared, and you may unsubscribe at any time.</p>
+</div>
 <div class="submit-row"><button class="btn primary" data-en="Send my feedback" data-es="Enviar mis respuestas" id="surveySubmit" type="submit">Send my feedback</button><small data-en="No account required. Your answers are securely processed by Formspree for this project's validation." data-es="No requiere cuenta. Formspree procesa tus respuestas de forma segura para la validación de este proyecto." id="surveyNote">No account required. Your answers are securely processed by Formspree for this project's validation.</small></div>
 <p aria-live="assertive" class="survey-error" hidden="" id="surveyError"></p>
 </form>

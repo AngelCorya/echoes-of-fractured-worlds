@@ -1,7 +1,8 @@
 async function loadEchoes(){
   const host=document.getElementById('dynamicContent');
   try{
-    const [a,b1,b2]=await Promise.all([fetch('content-a.html').then(r=>r.text()),fetch('content-b1.html').then(r=>r.text()),fetch('content-b2.html').then(r=>r.text())]);
+    const fresh=path=>fetch(path,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`${path}: ${r.status}`);return r.text()});
+    const [a,b1,b2]=await Promise.all([fresh('content-a.html'),fresh('content-b1.html'),fresh('content-b2.html')]);
     host.innerHTML=a+b1+b2;
     initEchoes();
   }catch(e){host.innerHTML='<p class="loading">Unable to load the experience. Please refresh.</p>';console.error(e);}

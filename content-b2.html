@@ -7,8 +7,10 @@
              This is an early validation survey. It takes about one minute. Your answers help decide language, platform, format and pricing priorities before money is spent.
           </p>
 </div>
-<form id="echoesSurvey">
+<form action="https://formspree.io/f/xnparzpq" id="echoesSurvey" method="POST">
 <input id="favoriteRune" name="favoriteRune" type="hidden" value=""/>
+<input aria-hidden="true" autocomplete="off" class="form-honeypot" name="_gotcha" tabindex="-1" type="text"/>
+<input name="source" type="hidden" value="Echoes Validation Hub V0.2"/>
 <fieldset>
 <legend data-en="What interests you most?" data-es="¿Qué te interesa más?">What interests you most?</legend>
 <label><input name="interest" type="checkbox" value="Novel"/> <span data-en="The novel" data-es="La novela">The novel</span></label>
@@ -48,9 +50,10 @@
 <label class="select-label"><span data-en="What made you most curious about Echoes?" data-es="¿Qué fue lo que más despertó tu curiosidad sobre Echoes?">What made you most curious about Echoes?</span><select name="hook" required=""><option value="">—</option><option>Story</option><option>Characters</option><option>Art / worlds</option><option>Nine runes</option><option>Music</option><option>Game combat</option><option>Novel</option></select></label>
 <label class="select-label"><span data-en="Optional: one thing you want to see next" data-es="Opcional: una cosa que te gustaría ver después">Optional: one thing you want to see next</span><textarea maxlength="500" name="comment" placeholder="..." rows="3"></textarea></label>
 <label class="consent"><input name="updates" type="checkbox"/><span data-en="I'd like to know when the next preview is available." data-es="Quiero saber cuando haya un nuevo adelanto.">I'd like to know when the next preview is available.</span></label>
-<div class="submit-row"><button class="btn primary" data-en="Prepare my feedback" data-es="Preparar mis respuestas" type="submit">Prepare my feedback</button><small data-en="No account required. This prototype does not send data to a server yet." data-es="No requiere cuenta. Este prototipo todavía no envía datos a un servidor." id="surveyNote">No account required. This prototype does not send data to a server yet.</small></div>
+<div class="submit-row"><button class="btn primary" data-en="Send my feedback" data-es="Enviar mis respuestas" id="surveySubmit" type="submit">Send my feedback</button><small data-en="No account required. Your answers are securely processed by Formspree for this project's validation." data-es="No requiere cuenta. Formspree procesa tus respuestas de forma segura para la validación de este proyecto." id="surveyNote">No account required. Your answers are securely processed by Formspree for this project's validation.</small></div>
+<p aria-live="assertive" class="survey-error" hidden="" id="surveyError"></p>
 </form>
-<div class="survey-result" hidden="" id="surveyResult"><h3 data-en="Thank you — your feedback is ready." data-es="Gracias — tus respuestas están listas.">Thank you — your feedback is ready.</h3><p data-en="For the zero-cost prototype, copy the summary below. Once the free form endpoint is connected, this same survey will submit automatically." data-es="Para el prototipo sin costo, copia el resumen de abajo. Una vez conectemos el formulario gratuito, esta misma encuesta se enviará automáticamente.">For the zero-cost prototype, copy the summary below. Once the free form endpoint is connected, this same survey will submit automatically.</p><pre id="surveyOutput"></pre><button class="btn ghost" data-en="Copy feedback" data-es="Copiar respuestas" id="copySurvey" type="button">Copy feedback</button></div>
+<div class="survey-result" hidden="" id="surveyResult"><h3 data-en="Thank you — your feedback was received." data-es="Gracias — recibimos tus respuestas.">Thank you — your feedback was received.</h3><p data-en="Your answers are now part of the early validation data for Echoes of Fractured Worlds." data-es="Tus respuestas ya forman parte de los datos de validación temprana de Echoes of Fractured Worlds.">Your answers are now part of the early validation data for Echoes of Fractured Worlds.</p><pre id="surveyOutput"></pre></div>
 </div>
 </section>
 <section class="final-cta"><div class="reveal"><span class="sigil">✦</span><h2 data-en="Enter the first fractured world." data-es="Entra al primer mundo fracturado.">Enter the first fractured world.</h2><p data-en="Echoes is being built independently from Mexico — one world, one track and one playable step at a time." data-es="Echoes se está construyendo de forma independiente desde México — un mundo, una canción y un paso jugable a la vez.">Echoes is being built independently from Mexico — one world, one track and one playable step at a time.</p><a class="btn primary" data-en="Start with the free chapter" data-es="Empieza con el capítulo gratis" href="#read">Start with the free chapter</a></div></section>

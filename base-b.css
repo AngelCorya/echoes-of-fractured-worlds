@@ -9,4 +9,5 @@ footer{border-top:1px solid var(--line);padding:28px 5vw 40px;display:flex;justi
 .conditional{display:none;padding:20px;border:1px solid var(--line);background:#0b1421}.conditional.visible{display:block}.conditional .conditional{margin-top:16px;background:#08101b}.conditional-title{margin:0 0 14px;color:var(--gold);font:600 12px Cinzel,serif;letter-spacing:.08em}.conditional select{margin-top:4px}
 .form-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}.survey-error{color:#ff9b9b;border:1px solid #ff7c7c55;background:#35151b;padding:12px 14px;font-size:12px;line-height:1.5}.submit-row button[disabled]{opacity:.65;cursor:wait}
 .email-conditional input[type="email"]{width:100%;background:#0d1725;border:1px solid #7d92ab39;color:#eff4fa;padding:13px 14px;border-radius:3px;font:inherit;margin-top:8px}.privacy-note{margin:12px 0 0;color:#8697aa;font-size:11px;line-height:1.6}
+.rune-survey-select small{display:block;margin-top:8px;color:#8697aa;font-size:11px;line-height:1.5}
 

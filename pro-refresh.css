@@ -1,0 +1,376 @@
+/* Echoes of Fractured Worlds — Novel-first professional refresh
+   2026-10-05
+   This file intentionally overrides the legacy layers without deleting them. */
+
+:root{
+  --ink:#05080d;
+  --ink-2:#080d15;
+  --panel:#0b121d;
+  --panel-2:#0d1724;
+  --text:#eef3f7;
+  --muted:#9aa8b7;
+  --gold:#c7aa70;
+  --gold-soft:#8f774a;
+  --cyan:#63cbe8;
+  --violet:#8f5fe8;
+  --line:#223247;
+  --line-strong:#354962;
+  --shadow:0 30px 80px #0009;
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 18% 4%,#15354b22,transparent 30rem),
+    radial-gradient(circle at 82% 16%,#6d2a7d14,transparent 34rem),
+    linear-gradient(180deg,#04070b,#070b12 32%,#05080d);
+  color:var(--text);
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:linear-gradient(90deg,transparent 49.9%,#ffffff05 50%,transparent 50.1%);
+  background-size:88px 100%;
+  opacity:.18;
+}
+
+.nav{
+  background:linear-gradient(180deg,#05080df2,#05080dc9);
+  border-bottom:1px solid #ffffff0d;
+  backdrop-filter:blur(20px) saturate(135%);
+  box-shadow:0 10px 40px #0004;
+}
+.brand{letter-spacing:.18em}
+.brand-mark{color:var(--gold);filter:drop-shadow(0 0 10px #c7aa7070)}
+.nav nav a{position:relative}
+.nav nav a:after{
+  content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;
+  background:linear-gradient(90deg,var(--gold),var(--cyan));
+  transition:right .25s ease;
+}
+.nav nav a:hover:after{right:0}
+
+.hero{
+  min-height:92vh;
+  display:grid;
+  align-items:end;
+  border-bottom:1px solid #ffffff0d;
+  isolation:isolate;
+}
+.hero-image{
+  filter:saturate(.88) contrast(1.08) brightness(.72);
+  transform:scale(1.025);
+}
+.hero-gradient{
+  background:
+    radial-gradient(circle at 70% 34%,transparent 0 18%,#04070a44 43%,#04070ae8 78%),
+    linear-gradient(90deg,#030609f0 0%,#030609d4 33%,#03060955 68%,#030609d9 100%),
+    linear-gradient(0deg,#05080d 0%,transparent 54%);
+}
+.hero-content{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+  padding:130px 0 98px;
+  position:relative;
+}
+.hero-content:before{
+  content:"NOVEL • LORE • SOUNDTRACK • GAME";
+  display:inline-block;
+  margin-bottom:28px;
+  color:#728398;
+  font:700 9px/1 Inter,Arial,sans-serif;
+  letter-spacing:.22em;
+  border-left:1px solid var(--gold);
+  padding-left:12px;
+}
+.hero .eyebrow{color:var(--gold);letter-spacing:.18em}
+.hero h1{
+  max-width:930px;
+  font-size:clamp(50px,7.4vw,108px);
+  line-height:.86;
+  letter-spacing:-.045em;
+  text-shadow:0 14px 55px #000;
+}
+.hero h1 span{
+  display:block;
+  margin-top:14px;
+  font-size:.42em;
+  letter-spacing:.14em;
+  color:#d8e1e9;
+}
+.hero .hook{
+  max-width:690px;
+  margin-top:30px;
+  color:#c3cdd8;
+  font:400 clamp(17px,1.9vw,23px)/1.65 Georgia,serif;
+}
+.hero-actions{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  border-radius:2px!important;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:10px!important;
+  font-weight:700!important;
+}
+.btn.primary{
+  background:linear-gradient(110deg,#d4b978,#ad8e53)!important;
+  color:#0c0d0f!important;
+  border-color:#dfc98f!important;
+  box-shadow:0 8px 30px #c5a86d1f;
+}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 13px 40px #c5a86d36}
+.btn.ghost{background:#07101bb8!important;border-color:#4d6178!important}
+.status-row{
+  margin-top:46px;
+  padding-top:18px;
+  border-top:1px solid #ffffff17;
+  max-width:900px;
+}
+.status-row span{color:#8797a9}
+.scroll{opacity:.65}
+
+#dynamicContent{overflow:hidden}
+.section{padding-top:116px;padding-bottom:116px}
+.section-head{max-width:920px}
+.kicker{
+  color:var(--gold)!important;
+  font-size:9px!important;
+  letter-spacing:.19em!important;
+}
+.section-head h2,.novel-copy h2,.saga h2,.lore-gateway h2{
+  font-size:clamp(36px,5vw,69px);
+  line-height:1.02;
+  letter-spacing:-.025em;
+}
+
+/* Novel-first opening */
+.novel-first{
+  position:relative;
+  padding-top:138px;
+}
+.novel-first:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,#c7aa705e,transparent);
+}
+.novel-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(310px,.72fr);
+  gap:70px;
+  align-items:center;
+}
+.novel-copy>p:not(.kicker){
+  color:#b0bdc9;
+  font-size:16px;
+  line-height:1.9;
+  max-width:760px;
+}
+.novel-copy .lead{
+  color:#e4e9ee!important;
+  font:italic 21px/1.65 Georgia,serif;
+  border-left:1px solid var(--gold);
+  padding-left:22px;
+  margin:30px 0;
+}
+.novel-signals{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:34px;
+}
+.signal-card{
+  min-height:128px;
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,#0d1722cc,#080d14);
+  padding:20px;
+}
+.signal-card small{
+  display:block;color:#6e8194;font-size:8px;font-weight:700;letter-spacing:.14em;margin-bottom:12px;
+}
+.signal-card strong{
+  display:block;color:#dde5ec;font:600 18px/1.35 Cinzel,Georgia,serif;
+}
+.novel-emblem{
+  position:relative;
+  min-height:510px;
+  display:grid;
+  place-items:center;
+  border:1px solid #27384d;
+  background:
+    radial-gradient(circle at center,#57cbe814 0 12%,transparent 13% 29%,#c7aa7009 30% 31%,transparent 32%),
+    linear-gradient(145deg,#0c1521,#05090f);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.novel-emblem:before,.novel-emblem:after{
+  content:"";position:absolute;border:1px solid #c7aa7032;border-radius:50%;
+}
+.novel-emblem:before{width:320px;height:320px}
+.novel-emblem:after{width:238px;height:238px;box-shadow:0 0 70px #5acbe91a}
+.novel-emblem .sigil{
+  font-family:Cinzel,serif;font-size:92px;color:var(--gold);
+  text-shadow:0 0 24px #c7aa7061,0 0 65px #63cbe833;
+}
+.novel-emblem .orbit-note{
+  position:absolute;bottom:24px;left:24px;right:24px;
+  color:#718396;font-size:8px;letter-spacing:.16em;text-align:center;
+}
+
+/* Reading panel */
+.read{padding-top:80px}
+.read-panel{
+  border:1px solid #3a4655!important;
+  background:
+    radial-gradient(circle at 84% 22%,#8c69331a,transparent 24rem),
+    linear-gradient(125deg,#0d1622,#080d14 72%)!important;
+  box-shadow:var(--shadow);
+  padding:58px!important;
+}
+.read-panel h2{font-size:clamp(35px,4.5vw,60px)!important}
+.read-panel p{max-width:720px;line-height:1.8}
+.book-object{filter:drop-shadow(0 28px 35px #000b)}
+.book-cover{
+  border-color:#967b4f!important;
+  background:
+    radial-gradient(circle at 50% 35%,#6fcce318,transparent 32%),
+    linear-gradient(145deg,#142030,#080c12 72%)!important;
+  box-shadow:inset 0 0 0 1px #c9ad6a16,0 30px 60px #0009!important;
+}
+.book-cover:after{
+  content:"THE STORY BEGINS HERE";
+  position:absolute;left:18px;right:18px;bottom:18px;
+  border-top:1px solid #c6a86b40;
+  padding-top:10px;color:#8c99a7;font:700 7px/1 Inter,Arial,sans-serif;letter-spacing:.15em;text-align:center;
+}
+
+/* Trilogy presentation */
+.saga{padding-top:86px}
+.saga-head{max-width:800px;margin-bottom:34px}
+.saga-head p:not(.kicker){color:var(--muted);line-height:1.8}
+.volume-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.volume-card{
+  position:relative;min-height:330px;overflow:hidden;
+  border:1px solid #2c3d51;
+  background:linear-gradient(160deg,#101a28,#070c13 72%);
+  padding:30px;
+  box-shadow:0 18px 45px #0004;
+}
+.volume-card:before{
+  content:"";position:absolute;width:260px;height:260px;border:1px solid #c7aa7024;border-radius:50%;
+  right:-110px;top:-125px;box-shadow:0 0 65px #63cbe80a;
+}
+.volume-card:nth-child(2):before{border-color:#7e68b633}
+.volume-card:nth-child(3):before{border-color:#a33a6b38}
+.volume-number{color:var(--gold);font:700 9px Inter,sans-serif;letter-spacing:.2em}
+.volume-card h3{font-family:Cinzel,serif;font-size:31px;margin:68px 0 16px}
+.volume-card p{color:#9dacbb;line-height:1.75;font-size:13px}
+.volume-card small{position:absolute;left:30px;bottom:27px;color:#607286;font-size:8px;letter-spacing:.13em}
+
+/* Lore gateway */
+.world{
+  background:
+    linear-gradient(180deg,transparent,#07111a85 12%,#07111a85 88%,transparent),
+    radial-gradient(circle at 70% 45%,#5acbe80d,transparent 34rem);
+}
+.world-grid{gap:64px!important}
+.world .copy p{font-size:15px!important;line-height:1.9!important}
+.lore-gateway{
+  margin-top:38px;
+  border-top:1px solid var(--line);
+  padding-top:34px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:30px;
+}
+.lore-gateway p{max-width:720px;color:var(--muted);line-height:1.7}
+.lore-actions{display:flex;gap:10px;flex-wrap:wrap}
+.rune-orbit{filter:drop-shadow(0 0 35px #63cbe826)}
+.rune-orbit .core{box-shadow:0 0 60px #63cbe83a!important}
+
+/* Cards */
+.cards{gap:16px!important}
+.card{
+  background:linear-gradient(145deg,#0b1420,#070c13)!important;
+  border-color:#28394c!important;
+  box-shadow:0 12px 35px #0003;
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.card:hover{transform:translateY(-5px);border-color:#506780!important;box-shadow:0 24px 55px #0006}
+.card>span{color:var(--gold)!important}
+
+/* Audio */
+.listen{position:relative}
+.track{
+  background:linear-gradient(115deg,#0c1520,#080d14)!important;
+  border-color:#2b3b4d!important;
+}
+.track-no{color:var(--gold)!important}
+.tracks audio{filter:saturate(.7)}
+
+/* Game framed as adaptation/expansion */
+.game{
+  position:relative;
+  margin-top:30px;
+  border-top:1px solid #ffffff0c;
+  background:
+    radial-gradient(circle at 20% 20%,#5dc8e90b,transparent 28rem),
+    radial-gradient(circle at 80% 45%,#8e2f6510,transparent 32rem);
+}
+.game .section-head p:not(.kicker){font-size:15px;line-height:1.8}
+.dev-copy,.game blockquote{
+  border-color:#2d3d50!important;
+  background:linear-gradient(145deg,#0c1520,#080d14)!important;
+}
+.rune-codex,.fracture-atlas{scroll-margin-top:110px}
+.rune-codex{
+  margin-top:86px!important;
+  padding-top:72px!important;
+  border-top:1px solid #2b3b4f;
+}
+
+/* Interactive lore polish */
+.codex-head,.atlas-head{position:relative}
+.codex-status,.atlas-status{
+  background:#07101aa8;
+  border-color:#31455c!important;
+  box-shadow:inset 0 0 18px #5bc9e807;
+}
+.rune-panel,.world-file,.fracture-map,.archive-plate,.character-card{
+  box-shadow:0 22px 55px #0005;
+}
+
+/* Survey becomes audience signal rather than generic form */
+.survey{
+  background:
+    radial-gradient(circle at 15% 25%,#c7aa700b,transparent 26rem),
+    linear-gradient(180deg,#070b11,#05080d);
+}
+
+/* Responsive */
+@media(max-width:980px){
+  .novel-grid{grid-template-columns:1fr}
+  .novel-emblem{min-height:360px}
+  .novel-signals{grid-template-columns:1fr 1fr 1fr}
+  .volume-grid{grid-template-columns:1fr}
+  .volume-card{min-height:250px}
+}
+@media(max-width:760px){
+  .section{padding-top:82px;padding-bottom:82px}
+  .hero{min-height:88vh}
+  .hero-content{width:min(100% - 30px,1180px);padding:118px 0 70px}
+  .hero h1{font-size:clamp(43px,15vw,70px)}
+  .hero h1 span{font-size:.36em;line-height:1.2}
+  .status-row{display:grid!important;gap:8px}
+  .novel-first{padding-top:100px}
+  .novel-grid{gap:38px}
+  .novel-signals{grid-template-columns:1fr}
+  .novel-emblem{min-height:310px}
+  .novel-emblem:before{width:230px;height:230px}
+  .novel-emblem:after{width:170px;height:170px}
+  .novel-emblem .sigil{font-size:66px}
+  .read-panel{padding:34px 24px!important}
+  .lore-gateway{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:520px){
+  .hero-actions,.lore-actions{display:grid;width:100%}
+  .hero-actions .btn,.lore-actions .btn{text-align:center}
+}

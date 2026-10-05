@@ -11,9 +11,23 @@
 <div class="signal-card"><small data-en="TONE" data-es="TONO">TONE</small><strong data-en="Dark fantasy • Sci-fi • Adventure" data-es="Fantasía oscura • Sci-fi • Aventura">Dark fantasy • Sci-fi • Adventure</strong></div>
 </div>
 </div>
-<div class="novel-emblem reveal" aria-label="The Nine Rune resonance emblem">
-<div class="sigil">✦</div>
-<div class="orbit-note" data-en="THE NINE RUNES ARE NOT TROPHIES. EACH ONE IS A WORLD, A MEMORY AND A CHOICE." data-es="LAS NUEVE RUNAS NO SON TROFEOS. CADA UNA ES UN MUNDO, UN RECUERDO Y UNA ELECCIÓN.">THE NINE RUNES ARE NOT TROPHIES. EACH ONE IS A WORLD, A MEMORY AND A CHOICE.</div>
+<div class="novel-emblem reveal" id="novelTalisman" role="group" aria-label="Interactive nine-rune talisman">
+<div class="novel-talisman-scene">
+<img class="novel-talisman-art" src="assets/novel-talisman-v1.webp" width="1161" height="1355" loading="lazy" decoding="async" alt="A primordial gold talisman suspended between fractured worlds"/>
+<button class="novel-rune" type="button" data-talisman-rune="root" style="--x:32%;--y:22%" aria-label="Rune of the Root" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/root.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune" type="button" data-talisman-rune="tide" style="--x:68%;--y:22%" aria-label="Rune of the Tide" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/tide.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune" type="button" data-talisman-rune="horizon" style="--x:82%;--y:33%" aria-label="Rune of the Horizon" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/horizon.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune" type="button" data-talisman-rune="prismatic" style="--x:86%;--y:49%" aria-label="Prismatic Rune" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/prismatic.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune" type="button" data-talisman-rune="inner" style="--x:80%;--y:66%" aria-label="Rune of the Inner Threshold" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/inner-threshold.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune" type="button" data-talisman-rune="convergence" style="--x:20%;--y:66%" aria-label="Rune of Convergence" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/convergence.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune" type="button" data-talisman-rune="rupture" style="--x:14%;--y:49%" aria-label="Rune of Rupture" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/rupture.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune" type="button" data-talisman-rune="echo" style="--x:18%;--y:33%" aria-label="Rune of the Last Echo" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/last-echo.webp" alt="" loading="lazy" decoding="async"/></button>
+<button class="novel-rune novel-rune-core" type="button" data-talisman-rune="herald" style="--x:50.7%;--y:49%" aria-label="Sigil of the Herald" aria-pressed="false" aria-describedby="novelRuneDetail"><img src="assets/runes/herald.webp" alt="" loading="lazy" decoding="async"/></button>
+</div>
+<div class="novel-resonance" aria-live="polite" aria-atomic="true">
+<span class="novel-resonance-title" id="novelRuneTitle" data-en="Nine runes. Nine resonances." data-es="Nueve runas. Nueve resonancias.">Nine runes. Nine resonances.</span>
+<span class="novel-resonance-detail" id="novelRuneDetail" data-en="Each one is a world, a memory and a choice." data-es="Cada una es un mundo, un recuerdo y una elección.">Each one is a world, a memory and a choice.</span>
+</div>
 </div>
 </div>
 </section>

@@ -235,7 +235,7 @@ body:before{
   display:grid;
   place-items:center;
   width:100%;
-  perspective:1400px;
+  perspective:1100px;
   isolation:isolate;
   filter:none;
 }
@@ -256,12 +256,38 @@ body:before{
   width:min(100%,clamp(300px,26vw,360px));
   height:auto;
   padding:0;
-  border:1px solid #c7aa7033;
+  border:1px solid #c7aa7059;
   border-radius:2px;
   background:#080c12;
-  box-shadow:-16px 28px 55px #0009,3px 1px 0 #020509,0 8px 20px #0004;
-  transform:rotateY(-8deg);
+  box-shadow:-22px 32px 60px #000a,0 8px 20px #0004;
+  transform-style:preserve-3d;
+  transform:rotateY(-15deg) rotateX(3deg);
   transition:transform .35s ease;
+}
+#read .book-cover:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#0007, #ffffff18 1%,#0004 2.5%,transparent 7%);
+  transform:translateZ(.5px);
+}
+#read .book-cover:after{
+  content:"";
+  position:absolute;
+  top:2px;
+  bottom:2px;
+  left:100%;
+  width:18px;
+  pointer-events:none;
+  transform-origin:left center;
+  transform:rotateY(90deg);
+  backface-visibility:hidden;
+  background:
+    linear-gradient(90deg,#292821aa,transparent 30%,#0c0d0d77),
+    repeating-linear-gradient(90deg,#d6d0be 0 1px,#9b978c 1px 2px);
+  border-block:1px solid #c7aa7033;
 }
 #read .book-cover img{
   display:block;
@@ -272,16 +298,18 @@ body:before{
   border-radius:inherit;
 }
 @media(hover:hover) and (pointer:fine){
-  #read .book-object:hover .book-cover{transform:translateY(-4px) rotateY(-5deg)}
+  #read .book-object:hover .book-cover{transform:translateY(-4px) rotateY(-12deg) rotateX(2deg)}
 }
 @media(max-width:850px){
   #read .read-panel{grid-template-columns:minmax(0,1fr);gap:42px}
   #read .book-object{perspective:none}
   #read .book-cover{width:min(100%,280px);transform:none}
+  #read .book-cover:after{width:4px;transform:none}
   #read .book-object:hover .book-cover{transform:none}
 }
 @media(prefers-reduced-motion:reduce){
   #read .book-cover{transition:none;transform:none}
+  #read .book-cover:after{width:4px;transform:none}
   #read .book-object:hover .book-cover{transform:none}
 }
 

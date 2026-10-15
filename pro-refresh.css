@@ -477,3 +477,43 @@ body:before{
   .hero-actions,.lore-actions{display:grid;width:100%}
   .hero-actions .btn,.lore-actions .btn{text-align:center}
 }
+
+/* Published trilogy: direct purchase banners, October 2026. */
+#books{scroll-margin-top:90px}
+.purchase{padding-top:72px;padding-bottom:72px}
+.purchase-heading{max-width:800px;margin-bottom:48px}
+.purchase-heading h2{font-family:Cinzel,Georgia,serif;font-size:clamp(34px,4.8vw,62px);line-height:1.14;margin:18px 0}
+.purchase-heading>p:last-child{color:#b1bfce;line-height:1.8;max-width:650px}
+.purchase-list{display:grid;gap:44px}
+.purchase-volume{--volume-rgb:99,203,232;min-width:0}
+.purchase-volume-2{--volume-rgb:174,117,236}
+.purchase-volume-3{--volume-rgb:106,184,159}
+.purchase-hook{font:500 clamp(17px,2.1vw,24px)/1.5 Cinzel,Georgia,serif;margin:0 0 16px;color:rgb(var(--volume-rgb))}
+.purchase-banner{position:relative;isolation:isolate;display:grid;grid-template-columns:240px minmax(0,1fr);align-items:center;gap:clamp(28px,5vw,72px);padding:40px clamp(24px,5vw,64px);border:1px solid rgba(var(--volume-rgb),.27);background:radial-gradient(ellipse at 12% 60%,rgba(var(--volume-rgb),.14),transparent 65%),linear-gradient(120deg,#101b29,#080d15);overflow:hidden;box-shadow:0 22px 55px #0004}
+.purchase-banner:before{content:"";position:absolute;inset:0;z-index:-1;border-left:3px solid rgba(var(--volume-rgb),.6);pointer-events:none}
+.purchase-cover{display:block;width:220px;max-width:100%;margin:auto;transform:perspective(1200px) rotateY(-8deg);box-shadow:-7px 4px 0 #10151e,-10px 5px 0 rgba(var(--volume-rgb),.25),0 22px 35px #000b;transition:transform .25s ease}
+.purchase-cover img{display:block;width:100%;height:auto}
+.purchase-copy{position:relative;z-index:1;max-width:620px;min-width:0}
+.purchase-copy h4{font:500 clamp(27px,3.5vw,45px)/1.2 Cinzel,Georgia,serif;color:#f0e4ce;margin:16px 0 22px;overflow-wrap:break-word}
+.purchase-description{color:#b9c7d5;font-size:15px;line-height:1.85;margin-bottom:28px;max-width:530px}
+.amazon-buy{gap:12px;min-height:50px}
+.purchase-language{display:block;color:#93a6b9;font-size:11px;line-height:1.6;margin-top:16px}
+.purchase-numeral{position:absolute;right:20px;bottom:-25px;z-index:-1;font:400 220px/1 Cinzel,Georgia,serif;color:rgba(var(--volume-rgb),.045);pointer-events:none}
+.volume-card .amazon-buy{margin-top:24px;align-self:flex-start}
+.volume-card h3{overflow-wrap:break-word}
+.purchase a:focus-visible{outline:3px solid rgb(var(--volume-rgb));outline-offset:6px}
+@media(hover:hover){.purchase-cover:hover{transform:perspective(1200px) rotateY(0) translateY(-4px)}}
+@media(max-width:650px){
+ .purchase{padding-top:48px;padding-bottom:48px}
+ .purchase-heading{margin-bottom:32px}
+ .purchase-list{gap:32px}
+ .purchase-banner{grid-template-columns:minmax(0,1fr);padding:30px 24px;gap:30px;text-align:center}
+ .purchase-hook{font-size:17px}
+ .purchase-cover{width:190px;transform:none}
+ .purchase-copy .kicker{line-height:1.8}
+ .purchase-copy h4{font-size:29px}
+ .purchase-description{font-size:14px}
+ .purchase-copy .amazon-buy{width:100%;box-sizing:border-box}
+}
+@media(prefers-reduced-motion:reduce){.purchase-cover{transform:none;transition:none}.purchase-cover:hover{transform:none}}
+.volume-card small{position:static;display:block;margin-top:22px;line-height:1.7}

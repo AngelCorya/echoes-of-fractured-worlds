@@ -517,3 +517,21 @@ body:before{
 }
 @media(prefers-reduced-motion:reduce){.purchase-cover{transform:none;transition:none}.purchase-cover:hover{transform:none}}
 .volume-card small{position:static;display:block;margin-top:22px;line-height:1.7}
+
+/* Author biography: personal portrait and the story behind the trilogy. */
+#author{scroll-margin-top:90px}
+.author{border-top:1px solid #c7aa7026;border-bottom:1px solid #c7aa7026}
+.author-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(36px,6vw,88px);align-items:start}
+.author-portrait{margin:0;position:sticky;top:110px;border:1px solid #c7aa7045;background:#0b1420;box-shadow:0 25px 65px #0006;overflow:hidden}
+.author-portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:42% 50%;filter:saturate(.8)}
+.author-portrait figcaption{padding:24px 26px;border-top:1px solid #c7aa7033;background:linear-gradient(120deg,#101a27,#090f18)}
+.author-portrait figcaption>span{display:block;font:500 21px/1.4 Cinzel,Georgia,serif;letter-spacing:.1em;color:#e2c88c}
+.author-portrait figcaption small{display:block;color:#9cabbc;font-size:11px;line-height:1.7;margin-top:8px}
+.author-copy{min-width:0}
+.author-copy h2{color:#eee3ce;margin:16px 0 24px}
+.author-intro{font:400 clamp(21px,2.4vw,29px)/1.55 Georgia,serif;color:#d7c49b;border-left:2px solid #c7aa7077;padding-left:22px;margin-bottom:30px}
+.author-story p{color:#b1bfce;font-size:14px;line-height:1.95;margin:0 0 20px}
+.author-thanks{color:#d5dfeb;font-size:14px;margin-top:28px}
+.author-signature{font:italic 30px/1.5 Georgia,serif;color:#d4b978;margin:12px 0 24px}
+.author-copy .text-link{display:inline-block;padding:10px 0}
+@media(max-width:800px){.author-grid{grid-template-columns:minmax(0,1fr);gap:36px}.author-portrait{position:relative;top:auto;width:min(100%,360px);margin:auto}.author-copy h2{font-size:40px}.author-intro{font-size:23px}.author-story p{font-size:14px}}
